@@ -428,14 +428,14 @@
 <script>
   // ====== PHOTO LIBRARY — to update a photo, replace its URL below. Nothing else needs to change. ======
   const PHOTOS = {
-    meetPortrait: "images/meetPortrait.jpg",
-    heroPortrait: "images/heroPortrait.jpg",
-    before1: "images/before1.jpg",
-    after1: "images/after1.jpg",
-    gallery1: "images/gallery1.jpg",
-    gallery2: "images/gallery2.jpg",
-    gallery3: "images/gallery3.jpg",
-    gallery4: "images/gallery4.jpg"
+    meetPortrait: "meetPortrait.jpeg",
+    heroPortrait: "heroPortrait.jpeg",
+    before1: "before1.jpeg",
+    after1: "after1.jpeg",
+    gallery1: "gallery1.jpeg",
+    gallery2: "gallery2.jpeg",
+    gallery3: "gallery3.jpeg",
+    gallery4: "gallery4.jpeg"
   };
   document.querySelectorAll('[data-photo]').forEach(img => {
     if (PHOTOS[img.dataset.photo]) img.src = PHOTOS[img.dataset.photo];
