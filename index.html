@@ -3,467 +3,480 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silikyan Construction — 3 Concepts</title>
+<title>Silikyan Construction | Home Remodeling &amp; Construction in Brooklyn, NY</title>
+<meta name="description" content="Silikyan Construction provides home remodeling, painting, drywall, flooring, tile and repair services in Brooklyn, NY. Get a free estimate.">
+<link rel="canonical" href="https://xugushik-source.github.io/silikyan-construction/">
+<meta property="og:title" content="Silikyan Construction | Home Remodeling &amp; Construction in Brooklyn, NY">
+<meta property="og:description" content="Home renovation, painting, drywall, flooring, tile and repair services in Brooklyn, NY. Get a free estimate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xugushik-source.github.io/silikyan-construction/">
+<meta property="og:image" content="https://xugushik-source.github.io/silikyan-construction/heroPortrait.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Silikyan Construction",
+  "telephone": "+1-201-450-4617",
+  "areaServed": "Brooklyn, NY",
+  "url": "https://xugushik-source.github.io/silikyan-construction/",
+  "sameAs": [
+    "https://www.instagram.com/build_in_ny/",
+    "https://www.thumbtack.com/ny/brooklyn/handyman/silikyan-construction/service/534215148665823246"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "45"
+  }
+}
+</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { -webkit-font-smoothing: antialiased; }
-
-  /* ---------- Picker chrome (neutral, not part of any concept) ---------- */
-  .picker {
-    position: sticky; top: 0; z-index: 100;
-    display: flex; gap: 0;
-    background: #fff; border-bottom: 1px solid #ddd;
-  }
-  .picker button {
-    flex: 1; padding: 14px 6px; border: none; background: #f2f2f0;
-    font-family: 'Work Sans', sans-serif; font-size: 13px; font-weight: 500;
-    color: #666; cursor: pointer; border-right: 1px solid #ddd;
-  }
-  .picker button:last-child { border-right: none; }
-  .picker button.active { background: #1a1a1a; color: #fff; }
-
-  .concept { display: none; }
-  .concept.active { display: block; }
-
-  button.cta { cursor: pointer; border: none; font-family: inherit; }
+  body { font-family: 'Inter', sans-serif; background: #F7F5F1; color: #14171A; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .eyebrow, .logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; }
   a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+  section { padding: 56px 20px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
 
-  /* ======================================================
-     CONCEPT A — "The Brooklyn Builder" (personal-trust,
-     continuity with the existing IG brand: charcoal + safety-gold)
-     ====================================================== */
-  .concept-a {
-    --bg: #F5F4F0; --dark: #1B1D1F; --gold: #E8AC1F; --text: #292B2D; --muted: #6B6F73;
-    background: var(--bg); color: var(--text);
-    font-family: 'Work Sans', sans-serif;
+  header {
+    position: sticky; top: 0; z-index: 200; background: #14171A;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px;
   }
-  .concept-a h1, .concept-a h2, .concept-a .brand {
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.2px;
+  .logo { color: #fff; font-size: 19px; letter-spacing: 0.3px; }
+  .nav-desktop { display: none; }
+  header .cta-small {
+    background: #E2A33D; color: #14171A; font-size: 13px; font-weight: 600;
+    padding: 9px 14px; border-radius: 3px;
   }
-  .concept-a header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 18px 20px; background: var(--dark);
+  .burger {
+    background: none; border: none; color: #fff; font-size: 22px; padding: 4px 8px; cursor: pointer;
+    display: flex; align-items: center; gap: 10px;
   }
-  .concept-a .brand { color: #fff; font-size: 22px; }
-  .concept-a .brand span { color: var(--gold); }
-  .concept-a header a.phone { color: var(--gold); font-size: 14px; font-family: 'Work Sans'; font-weight: 600; }
-  .concept-a .hero { padding: 48px 20px 40px; background: var(--dark); color: #fff; }
-  .concept-a .hero h1 { font-size: 42px; line-height: 1.05; color: #fff; margin-bottom: 16px; }
-  .concept-a .hero p { color: #C7C9CB; font-size: 16px; line-height: 1.55; max-width: 32ch; margin-bottom: 26px; }
-  .concept-a .hero-buttons { display: flex; flex-direction: column; gap: 10px; }
-  .concept-a .btn-primary {
-    background: var(--gold); color: #1B1D1F; padding: 14px 20px; font-size: 15px; font-weight: 600;
-    border-radius: 2px; text-align: center;
+  .mobile-nav {
+    display: none; flex-direction: column; background: #1c2024; padding: 8px 20px 16px;
   }
-  .concept-a .btn-secondary {
-    border: 1px solid #4A4C4E; color: #fff; padding: 14px 20px; font-size: 15px; text-align: center; border-radius: 2px;
-  }
-  .concept-a section { padding: 44px 20px; }
-  .concept-a .meet { display: flex; flex-direction: column; gap: 20px; }
-  .concept-a .meet-photo {
-    width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center 15%;
-    border-radius: 4px; display: block; background: #2b2d2f;
-  }
-  .concept-a .meet h2 { font-size: 28px; margin-bottom: 10px; }
-  .concept-a .meet p { color: var(--muted); font-size: 15px; line-height: 1.6; }
-  .concept-a .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .concept-a .ba-slider { position: relative; aspect-ratio: 1; border-radius: 4px; overflow: hidden; background: #2b2d2f; }
-  .concept-a .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .concept-a .ba-after-wrap { position: absolute; inset: 0; }
-  .concept-a .ba-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; left: 50%; pointer-events: none; box-shadow: 0 0 4px rgba(0,0,0,.5); }
-  .concept-a .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  .concept-a .ba-card { aspect-ratio: 1; border-radius: 4px; position: relative; overflow: hidden; }
-  .concept-a .ba-card.before { background: repeating-linear-gradient(45deg,#d8d5cd,#d8d5cd 8px,#cfccc3 8px,#cfccc3 16px); }
-  .concept-a .ba-card.after { background: linear-gradient(160deg,#fff,#e9e6de); border: 1px solid #ddd; }
-  .concept-a .ba-label {
-    position: absolute; bottom: 8px; left: 8px; background: var(--dark); color: #fff;
-    font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 2px; font-family: 'Work Sans';
-  }
-  .concept-a .quote { border-left: 3px solid var(--gold); padding-left: 16px; margin-bottom: 24px; }
-  .concept-a .quote p { font-size: 16px; line-height: 1.5; margin-bottom: 8px; }
-  .concept-a .quote span { font-size: 13px; color: var(--muted); }
-  .concept-a footer {
-    background: var(--dark); color: #fff; padding: 40px 20px; text-align: center;
-  }
-  .concept-a footer h2 { font-size: 26px; margin-bottom: 10px; color: #fff; }
-  .concept-a footer p { color: #C7C9CB; margin-bottom: 20px; font-size: 15px; }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { color: #C9CCD1; padding: 10px 0; font-size: 15px; border-bottom: 1px solid #2a2e33; }
 
-  /* ======================================================
-     CONCEPT B — "Silikyan Construction Inc." (institutional
-     trust: blueprint navy + brass, slab-serif solidity)
-     ====================================================== */
-  .concept-b {
-    --navy: #12203A; --line: #8FA8C4; --brass: #A9752E; --paper: #F7F6F2; --ink: #16202E;
-    background: var(--paper); color: var(--ink);
-    font-family: 'Inter', sans-serif;
+  .hero-photo-wrap { width: 100%; aspect-ratio: 4/5; overflow: hidden; background: #e7e2d5; }
+  .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; }
+  .hero { background: #14171A; color: #fff; padding: 32px 20px 40px; }
+  .eyebrow { color: #E2A33D; font-size: 14px; letter-spacing: 1px; margin-bottom: 10px; }
+  .hero h1 { font-size: 34px; line-height: 1.12; margin-bottom: 14px; }
+  .hero p { color: #C9CCD1; font-size: 15.5px; line-height: 1.6; max-width: 40ch; margin-bottom: 24px; }
+  .btn-row { display: flex; flex-direction: column; gap: 10px; }
+  .btn-primary {
+    background: #E2A33D; color: #14171A; padding: 15px 22px; font-size: 15.5px; font-weight: 600;
+    border-radius: 3px; text-align: center; display: block; border: none; cursor: pointer;
   }
-  .concept-b h1, .concept-b h2 { font-family: 'Zilla Slab', serif; font-weight: 600; }
-  .concept-b header {
-    background: var(--navy); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;
+  .btn-secondary {
+    border: 1px solid #3c4046; color: #fff; padding: 14px 22px; font-size: 15.5px;
+    text-align: center; border-radius: 3px; display: block;
   }
-  .concept-b .mark { display: flex; align-items: center; gap: 10px; }
-  .concept-b .mark-icon {
-    width: 30px; height: 30px; border: 1.5px solid var(--brass); position: relative; flex-shrink: 0;
-  }
-  .concept-b .mark-icon::after { content:""; position:absolute; inset: 6px; border: 1px solid var(--line); }
-  .concept-b .mark-text { color: #fff; font-family: 'Zilla Slab'; font-size: 15px; font-weight: 600; line-height: 1.2; }
-  .concept-b .mark-text small { display: block; color: var(--line); font-family: 'Inter'; font-size: 10px; font-weight: 400; letter-spacing: 0.3px; }
-  .concept-b .badges { display: flex; gap: 8px; padding: 12px 20px; background: #fff; border-bottom: 1px solid #e3e1d9; flex-wrap: wrap; }
-  .concept-b .badge {
-    font-size: 11.5px; color: var(--navy); border: 1px solid #d7d3c8; padding: 5px 10px; border-radius: 20px;
-  }
-  .concept-b .hero { padding: 44px 20px 36px; }
-  .concept-b .hero h1 { font-size: 34px; line-height: 1.15; margin-bottom: 14px; color: var(--navy); }
-  .concept-b .hero p { font-size: 15.5px; line-height: 1.6; color: #495468; max-width: 34ch; margin-bottom: 24px; }
-  .concept-b .btn-primary {
-    background: var(--navy); color: #fff; padding: 13px 22px; font-size: 14.5px; font-weight: 500; display: inline-block;
-  }
-  .concept-b section { padding: 36px 20px; }
-  .concept-b .section-title { font-size: 22px; margin-bottom: 18px; color: var(--navy); }
-  .concept-b .services { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .concept-b .service {
-    border: 1px solid #e3e1d9; padding: 16px 14px; background: #fff; border-top: 2px solid var(--brass);
-  }
-  .concept-b .service h3 { font-family: 'Inter'; font-size: 14.5px; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
-  .concept-b .service p { font-size: 12.5px; color: #6b7688; line-height: 1.4; }
-  .concept-b .process { border-left: 2px solid var(--line); padding-left: 20px; display: flex; flex-direction: column; gap: 22px; margin-left: 6px; }
-  .concept-b .process-step { position: relative; }
-  .concept-b .process-step::before {
-    content: attr(data-n); position: absolute; left: -30px; top: 0; width: 22px; height: 22px;
-    background: var(--navy); color: #fff; font-size: 11.5px; font-weight: 600;
-    display: flex; align-items: center; justify-content: center; border-radius: 50%;
-  }
-  .concept-b .process-step h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--navy); font-family: 'Inter';}
-  .concept-b .process-step p { font-size: 13px; color: #6b7688; line-height: 1.5; }
-  .concept-b .area { background: var(--navy); color: #fff; padding: 32px 20px; }
-  .concept-b .area h2 { color: #fff; font-size: 20px; margin-bottom: 12px; }
-  .concept-b .area-list { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12.5px; }
-  .concept-b .area-list span { border: 1px solid #33465f; padding: 5px 10px; color: var(--line); }
-  .concept-b footer { padding: 36px 20px; text-align: center; }
-  .concept-b footer h2 { font-size: 22px; margin-bottom: 8px; color: var(--navy); }
-  .concept-b footer p { font-size: 14px; color: #6b7688; margin-bottom: 18px; }
 
-  /* ======================================================
-     CONCEPT C — "Get a Free Estimate" (conversion funnel:
-     one CTA, one path, humanist serif, amber accent)
-     ====================================================== */
-  .concept-c {
-    --bg: #FAF8F3; --ink: #14231F; --amber: #C98A2B; --sage: #7C8B7E;
-    background: var(--bg); color: var(--ink);
-    font-family: 'Inter', sans-serif; padding-bottom: 64px; position: relative;
+  .trust-bar {
+    background: #1c2024; color: #fff; padding: 20px; display: flex; flex-wrap: wrap;
+    gap: 18px 26px; justify-content: center; text-align: center; font-size: 13px;
   }
-  .concept-c h1, .concept-c h2 { font-family: 'Fraunces', serif; font-weight: 600; }
-  .concept-c header {
-    display: flex; justify-content: space-between; align-items: center; padding: 16px 20px;
-  }
-  .concept-c .logo { font-family: 'Fraunces'; font-size: 17px; font-weight: 600; }
-  .concept-c .btn-amber {
-    background: var(--amber); color: #fff; padding: 9px 14px; font-size: 13px; font-weight: 500; border-radius: 3px;
-  }
-  .concept-c .hero { padding: 20px 20px 40px; }
-  .concept-c .hero h1 { font-size: 32px; line-height: 1.2; margin-bottom: 16px; }
-  .concept-c .hero .pain { font-size: 14.5px; color: #5c6a5e; line-height: 1.6; margin-bottom: 14px; }
-  .concept-c .hero .pain strong { color: var(--ink); font-weight: 600; }
-  .concept-c .hero .pitch { font-size: 15px; line-height: 1.6; margin-bottom: 22px; }
-  .concept-c .btn-cta {
-    background: var(--ink); color: #fff; padding: 15px 22px; font-size: 15px; font-weight: 500;
-    display: block; text-align: center; border-radius: 3px; margin-bottom: 10px;
-  }
-  .concept-c .btn-note { font-size: 12px; color: var(--sage); text-align: center; }
-  .concept-c .trust-row {
-    display: flex; flex-direction: column; gap: 8px; padding: 18px 20px; border-top: 1px solid #e7e2d5; border-bottom: 1px solid #e7e2d5;
-    font-size: 13px; color: #5c6a5e;
-  }
-  .concept-c .trust-row span { color: var(--ink); font-weight: 500; }
-  .concept-c section { padding: 36px 20px; }
-  .concept-c .section-title { font-size: 22px; margin-bottom: 18px; }
-  .concept-c .steps { display: flex; flex-direction: column; gap: 18px; }
-  .concept-c .step { display: flex; gap: 14px; }
-  .concept-c .step-n {
-    width: 26px; height: 26px; border: 1.5px solid var(--amber); color: var(--amber); flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; border-radius: 50%;
-  }
-  .concept-c .step h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; font-family: 'Inter'; }
-  .concept-c .step p { font-size: 13px; color: #5c6a5e; line-height: 1.5; }
-  .concept-c .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
-  .concept-c .ba div { aspect-ratio: 1; border-radius: 4px; }
-  .concept-c .ba .before { background: repeating-linear-gradient(45deg,#e5e0d2,#e5e0d2 8px,#dcd6c6 8px,#dcd6c6 16px); }
-  .concept-c .ba .after { background: linear-gradient(160deg,#fff,#eee9db); border: 1px solid #e7e2d5; }
-  .concept-c .reviews { display: flex; flex-direction: column; gap: 16px; }
-  .concept-c .review { background: #fff; border: 1px solid #e7e2d5; padding: 16px; border-radius: 4px; }
-  .concept-c .review p { font-size: 14px; line-height: 1.55; margin-bottom: 8px; }
-  .concept-c .review span { font-size: 12.5px; color: var(--sage); }
-  .concept-c .final { text-align: center; padding: 40px 20px; }
-  .concept-c .final h2 { font-size: 26px; margin-bottom: 12px; }
-  .concept-c .sticky-cta {
-    position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: #fff;
-    padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 13px;
-  }
-  .concept-c .sticky-cta .btn-amber { padding: 8px 14px; }
+  .trust-bar .stat b { display: block; font-size: 20px; color: #E2A33D; font-family: 'Barlow Condensed'; }
+  .stars { color: #E2A33D; letter-spacing: 2px; font-size: 16px; }
 
-  /* -- added: hero photo, before/after slider, gallery, contact form -- */
-  .concept-c .hero-photo-wrap { width: 100%; aspect-ratio: 3/4; overflow: hidden; background: #e7e2d5; }
-  .concept-c .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 8%; display: block; }
-  .concept-c .ba-slider { position: relative; aspect-ratio: 1; border-radius: 4px; overflow: hidden; margin-top: 6px; background: #e7e2d5; }
-  .concept-c .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .concept-c .ba-after-wrap { position: absolute; inset: 0; }
-  .concept-c .ba-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; left: 50%; pointer-events: none; box-shadow: 0 0 4px rgba(0,0,0,.35); }
-  .concept-c .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-  .concept-c .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .concept-c .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; display: block; background: #e7e2d5; }
-  .concept-c .contact-form { display: flex; flex-direction: column; gap: 10px; text-align: left; max-width: 360px; margin: 0 auto; }
-  .concept-c .contact-form input, .concept-c .contact-form select, .concept-c .contact-form textarea {
-    border: 1px solid #d9d4c5; border-radius: 3px; padding: 12px; font-size: 14px; font-family: 'Inter', sans-serif; background: #fff;
+  #about h2 { font-size: 26px; margin-bottom: 14px; }
+  #about img { border-radius: 4px; margin-bottom: 20px; aspect-ratio: 4/3; object-fit: cover; object-position: center 12%; }
+  #about p { color: #454C52; font-size: 15px; line-height: 1.65; margin-bottom: 14px; }
+  .about-points { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .about-points span { border: 1px solid #DDD8CC; padding: 6px 12px; border-radius: 20px; font-size: 12.5px; color: #454C52; }
+
+  #services { background: #fff; }
+  #services h2 { font-size: 26px; margin-bottom: 24px; }
+  .service-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .service-card {
+    border: 1px solid #EAE6DC; border-radius: 4px; padding: 20px; transition: border-color .2s;
   }
-  .concept-c .contact-form textarea { resize: vertical; }
+  .service-card:hover { border-color: #E2A33D; }
+  .service-card .num { color: #E2A33D; font-family: 'Barlow Condensed'; font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+  .service-card h3 { font-size: 18px; margin-bottom: 6px; }
+  .service-card p { color: #5B6570; font-size: 14px; line-height: 1.5; margin-bottom: 14px; }
+  .service-card a { font-size: 13px; font-weight: 600; color: #14171A; border-bottom: 1px solid #E2A33D; }
+
+  #before-after h2 { font-size: 26px; margin-bottom: 4px; }
+  #before-after .sub { color: #5B6570; font-size: 14.5px; margin-bottom: 20px; }
+  .ba-slider { position: relative; aspect-ratio: 4/3; border-radius: 4px; overflow: hidden; background: #e7e2d5; }
+  .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ba-after-wrap { position: absolute; inset: 0; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; left: 50%; pointer-events: none; box-shadow: 0 0 6px rgba(0,0,0,.4); }
+  .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .ba-label {
+    position: absolute; top: 10px; background: rgba(20,23,26,.85); color: #fff;
+    font-size: 11.5px; font-weight: 600; padding: 4px 10px; border-radius: 2px; letter-spacing: 0.4px;
+  }
+  .ba-label.before { left: 10px; } .ba-label.after { right: 10px; }
+
+  #projects { background: #fff; }
+  #projects h2 { font-size: 26px; margin-bottom: 4px; }
+  #projects .sub { color: #5B6570; font-size: 14.5px; margin-bottom: 20px; }
+  .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gallery-grid img { aspect-ratio: 1; object-fit: cover; border-radius: 4px; cursor: pointer; }
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,12,14,.92);
+    align-items: center; justify-content: center; padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 90vh; border-radius: 4px; }
+
+  #reviews h2 { font-size: 26px; margin-bottom: 4px; }
+  #reviews .rating-line { color: #5B6570; font-size: 14px; margin-bottom: 20px; }
+  .review { background: #fff; border: 1px solid #EAE6DC; padding: 16px; border-radius: 4px; margin-bottom: 14px; }
+  .review .stars { font-size: 13px; margin-bottom: 6px; display: block; }
+  .review p { font-size: 14px; line-height: 1.55; color: #33383D; margin-bottom: 8px; }
+  .review span.name { font-size: 12.5px; color: #5B6570; }
+  .tt-link { display: inline-block; margin-top: 6px; font-size: 13.5px; font-weight: 600; border-bottom: 1px solid #E2A33D; }
+
+  #how h2 { font-size: 26px; margin-bottom: 20px; }
+  .step-row { display: flex; gap: 14px; margin-bottom: 20px; }
+  .step-n {
+    width: 30px; height: 30px; border-radius: 50%; background: #14171A; color: #E2A33D;
+    display: flex; align-items: center; justify-content: center; font-size: 13.5px; font-weight: 700; flex-shrink: 0;
+    font-family: 'Barlow Condensed';
+  }
+  .step-row h3 { font-size: 15.5px; margin-bottom: 3px; }
+  .step-row p { font-size: 13.5px; color: #5B6570; line-height: 1.5; }
+
+  #estimate-promo { background: #14171A; color: #fff; text-align: center; }
+  #estimate-promo h2 { font-size: 26px; margin-bottom: 10px; }
+  #estimate-promo p { color: #C9CCD1; font-size: 15px; margin-bottom: 22px; }
+  #estimate-promo .btn-row { max-width: 320px; margin: 0 auto; }
+
+  #estimate { background: #fff; }
+  #estimate h2 { font-size: 24px; margin-bottom: 6px; }
+  #estimate .sub { color: #5B6570; font-size: 14px; margin-bottom: 20px; }
+  form { display: flex; flex-direction: column; gap: 10px; }
+  form input, form select, form textarea {
+    border: 1px solid #D9D4C5; border-radius: 3px; padding: 13px; font-size: 14.5px;
+    font-family: 'Inter'; background: #FAF9F6; width: 100%;
+  }
+  form textarea { resize: vertical; }
+  form button { margin-top: 4px; }
+  .form-note { font-size: 12px; color: #8A8F94; text-align: center; margin-top: 8px; }
+
+  footer { background: #0F1114; color: #C9CCD1; text-align: center; padding: 36px 20px 90px; }
+  footer .logo { color: #fff; font-size: 18px; margin-bottom: 6px; }
+  footer p { font-size: 13.5px; margin-bottom: 4px; }
+  footer .footer-links { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin: 16px 0; font-size: 13px; }
+  footer .copyright { font-size: 11.5px; color: #6b7075; margin-top: 18px; }
+
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 250; background: #14171A;
+    display: flex; gap: 8px; padding: 10px 12px;
+  }
+  .sticky-cta a { flex: 1; text-align: center; padding: 12px; border-radius: 3px; font-size: 14px; font-weight: 600; }
+  .sticky-cta .call { border: 1px solid #3c4046; color: #fff; }
+  .sticky-cta .est { background: #E2A33D; color: #14171A; }
+
+  @media (min-width: 860px) {
+    .sticky-cta { display: none; }
+    .nav-desktop { display: flex; gap: 22px; }
+    .nav-desktop a { color: #C9CCD1; font-size: 14px; }
+    .burger { display: none; }
+    .hero { display: flex; align-items: center; gap: 40px; padding: 60px 40px; }
+    .hero-photo-wrap { flex-shrink: 0; width: 340px; aspect-ratio: 4/5; }
+    .hero-text { max-width: 480px; }
+    .wrap { max-width: 960px; }
+    .service-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+    #about { display: flex; gap: 40px; align-items: flex-start; }
+    #about .wrap { display: flex; gap: 40px; max-width: 960px; }
+    #about img { width: 340px; flex-shrink: 0; margin-bottom: 0; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.in { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
 
-<div class="picker">
-  <button class="active" data-target="concept-a">A · Brooklyn Builder</button>
-  <button data-target="concept-b">B · Construction Inc.</button>
-  <button data-target="concept-c">C · Free Estimate</button>
+<header>
+  <div class="logo">SILIKYAN CONSTRUCTION</div>
+  <nav class="nav-desktop">
+    <a href="#top">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#estimate">Contact</a>
+  </nav>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <a class="cta-small" href="#estimate">FREE ESTIMATE</a>
+    <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#top">Home</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#about">About</a>
+  <a href="#estimate">Contact</a>
 </div>
 
-<!-- ===================== CONCEPT A ===================== -->
-<div class="concept concept-a active" id="concept-a">
-  <header>
-    <div class="brand">SILIKYAN<span>BUILD</span></div>
-    <a class="phone" href="tel:+12014504617">(201) 450-4617</a>
-  </header>
-
-  <div class="hero">
-    <h1>Design, build,<br>impress.</h1>
-    <p>Interior and exterior renovation in Brooklyn — one crew, one point of contact, from first walkthrough to final coat of paint.</p>
-    <div class="hero-buttons">
-      <a class="cta btn-primary" href="https://wa.me/12014504617" style="display:block;">Get a free estimate</a>
-      <a class="btn-secondary" href="tel:+12014504617">Call (201) 450-4617</a>
+<div id="top"></div>
+<div class="hero">
+  <div class="hero-photo-wrap"><img class="hero-photo" src="heroPortrait.jpeg" width="549" height="893" alt="Khoren Silikyan, owner of Silikyan Construction, on a job site in Brooklyn"></div>
+  <div class="hero-text">
+    <div class="eyebrow">SILIKYAN CONSTRUCTION</div>
+    <h1>Professional Home Remodeling &amp; Construction in Brooklyn, NY</h1>
+    <p>From repairs and painting to complete renovations — quality workmanship, clear communication, and a clean job site.</p>
+    <div class="btn-row">
+      <a class="btn-primary" href="#estimate">GET A FREE ESTIMATE</a>
+      <a class="btn-secondary" href="tel:+12014504617">CALL NOW · (201) 450-4617</a>
     </div>
   </div>
+</div>
 
-  <section class="meet">
-    <img class="meet-photo" data-photo="meetPortrait" alt="Khoren Silikyan">
+<div class="trust-bar">
+  <div class="stat"><span class="stars">★★★★★</span><b>4.9 / 5</b></div>
+  <div class="stat"><b>45+</b>Reviews</div>
+  <div class="stat"><b>Top Pro</b>on Thumbtack</div>
+  <div class="stat"><b>47+</b>Projects</div>
+  <div class="stat"><b>5</b>-Person Team</div>
+</div>
+
+<section id="about" class="reveal">
+  <div class="wrap">
+    <img src="meetPortrait.jpeg" width="700" height="444" alt="Khoren Silikyan on site in Brooklyn" loading="lazy">
     <div>
-      <h2>Meet Khoren</h2>
-      <p>Khoren Silikyan has spent his career turning tired kitchens, basements, and building exteriors into spaces people are proud to come home to. Every job gets his personal attention, from the first measurement to the final walkthrough.</p>
+      <h2>Built on Quality. Backed by Real Work.</h2>
+      <p>Silikyan Construction is a small, professional team based in Brooklyn, handling everything from single-room repairs to full renovations. Every job gets the same level of attention, whether it's a patch job or a full remodel.</p>
+      <p>Clear estimates, reliable scheduling, and direct communication from the first walkthrough to the final coat of paint.</p>
+      <div class="about-points">
+        <span>Attention to detail</span>
+        <span>Reliable scheduling</span>
+        <span>Clear estimates</span>
+        <span>Clean work</span>
+        <span>Direct communication</span>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2 style="font-size:24px;margin-bottom:16px;">Recent transformation</h2>
+<section id="services" class="reveal">
+  <div class="wrap">
+    <h2>Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="num">01</div>
+        <h3>Home Remodeling</h3>
+        <p>Full and partial home renovations.</p>
+        <a href="#estimate">GET AN ESTIMATE</a>
+      </div>
+      <div class="service-card">
+        <div class="num">02</div>
+        <h3>Kitchen &amp; Bathroom</h3>
+        <p>Kitchen and bathroom upgrades, fixtures, tile and finishing.</p>
+        <a href="#estimate">GET AN ESTIMATE</a>
+      </div>
+      <div class="service-card">
+        <div class="num">03</div>
+        <h3>Painting</h3>
+        <p>Interior and exterior painting.</p>
+        <a href="#estimate">GET AN ESTIMATE</a>
+      </div>
+      <div class="service-card">
+        <div class="num">04</div>
+        <h3>Drywall &amp; Plaster</h3>
+        <p>Installation, repair, patching and finishing.</p>
+        <a href="#estimate">GET AN ESTIMATE</a>
+      </div>
+      <div class="service-card">
+        <div class="num">05</div>
+        <h3>Flooring &amp; Tile</h3>
+        <p>Floor installation, tile work and repairs.</p>
+        <a href="#estimate">GET AN ESTIMATE</a>
+      </div>
+      <div class="service-card">
+        <div class="num">06</div>
+        <h3>Home Repairs</h3>
+        <p>General repairs, doors, walls and other residential improvements.</p>
+        <a href="#estimate">GET AN ESTIMATE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="before-after" class="reveal">
+  <div class="wrap">
+    <h2>See the Difference.</h2>
+    <div class="sub">Real work. Real transformations.</div>
     <div class="ba-slider">
-      <img class="ba-img" data-photo="before1" alt="Before renovation">
-      <div class="ba-after-wrap"><img class="ba-img" data-photo="after1" alt="After renovation"></div>
+      <img class="ba-img" src="before1.jpeg" alt="Before renovation" loading="lazy">
+      <div class="ba-after-wrap"><img class="ba-img" src="after1.jpeg" alt="After renovation" loading="lazy"></div>
+      <span class="ba-label before">BEFORE</span>
+      <span class="ba-label after">AFTER</span>
       <div class="ba-handle"></div>
       <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="quote">
-      <p>"Khoren showed up when he said he would and the kitchen looked better than the render."</p>
-      <span>— Park Slope homeowner</span>
+<section id="projects" class="reveal">
+  <div class="wrap">
+    <h2>Recent Work</h2>
+    <div class="sub">A look at some of the work completed by our team.</div>
+    <div class="gallery-grid">
+      <img src="gallery1.jpeg" alt="Recent project 1" loading="lazy" onclick="openLightbox('gallery1.jpeg')">
+      <img src="gallery2.jpeg" alt="Recent project 2" loading="lazy" onclick="openLightbox('gallery2.jpeg')">
+      <img src="gallery3.jpeg" alt="Recent project 3" loading="lazy" onclick="openLightbox('gallery3.jpeg')">
+      <img src="gallery4.jpeg" alt="Recent project 4" loading="lazy" onclick="openLightbox('gallery4.jpeg')">
     </div>
-    <div class="quote">
-      <p>"Details make the difference — that's not just a slogan with this crew."</p>
-      <span>— Bay Ridge renovation client</span>
-    </div>
-  </section>
-
-  <footer>
-    <h2>Ready to start?</h2>
-    <p>Get a free, no-obligation estimate this week.</p>
-    <a class="cta btn-primary" href="https://wa.me/12014504617" style="display:inline-block;">Get a free estimate</a>
-  </footer>
+  </div>
+</section>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="">
 </div>
 
-<!-- ===================== CONCEPT B ===================== -->
-<div class="concept concept-b" id="concept-b">
-  <header>
-    <div class="mark">
-      <div class="mark-icon"></div>
-      <div class="mark-text">SILIKYAN CONSTRUCTION<small>INC.</small></div>
+<section id="reviews" class="reveal">
+  <div class="wrap">
+    <h2>What Our Customers Say</h2>
+    <div class="rating-line"><span class="stars">★★★★★</span> 4.9 / 5 · 45 Reviews · Top Pro — Thumbtack</div>
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <p>Punctual, professional, and left the place spotless when the job was done — cleanup included, not an afterthought.</p>
+      <span class="name">— Verified Thumbtack review</span>
     </div>
-  </header>
-  <div class="badges">
-    <div class="badge">Licensed general contractor</div>
-    <div class="badge">Fully insured</div>
-    <div class="badge">Brooklyn, NY</div>
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <p>Repaired serious damage in our apartment and made it look brand new — the quality of the work spoke for itself.</p>
+      <span class="name">— Verified Thumbtack review</span>
+    </div>
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <p>Showed up on time and finished the job the same day — no delays, no excuses.</p>
+      <span class="name">— Verified Thumbtack review</span>
+    </div>
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <p>Noticed the small details other contractors would have skipped. Already planning to hire again for the next project.</p>
+      <span class="name">— Verified Thumbtack review</span>
+    </div>
+    <a class="tt-link" href="https://www.thumbtack.com/ny/brooklyn/handyman/silikyan-construction/service/534215148665823246" target="_blank" rel="noopener">See More Reviews on Thumbtack →</a>
   </div>
+</section>
 
-  <div class="hero">
-    <h1>Built to last, from foundation to finish.</h1>
-    <p>Full-service interior and exterior renovation for homeowners and property owners across the five boroughs.</p>
-    <a class="cta btn-primary" href="https://wa.me/12014504617" style="display:inline-block;">Request a consultation</a>
+<section id="how" class="reveal">
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <div class="step-row"><div class="step-n">1</div><div><h3>Tell Us About Your Project</h3><p>Tell us what you need done.</p></div></div>
+    <div class="step-row"><div class="step-n">2</div><div><h3>Get Your Estimate</h3><p>We review the project and provide a clear estimate.</p></div></div>
+    <div class="step-row"><div class="step-n">3</div><div><h3>Schedule the Work</h3><p>Choose a convenient date and we plan the job.</p></div></div>
+    <div class="step-row"><div class="step-n">4</div><div><h3>We Get It Done</h3><p>Our team completes the work and walks through the result with you.</p></div></div>
   </div>
+</section>
 
-  <section>
-    <div class="section-title">Services</div>
-    <div class="services">
-      <div class="service"><h3>Interior renovation</h3><p>Kitchens, baths, full-floor remodels</p></div>
-      <div class="service"><h3>Exterior & facade</h3><p>Siding, decks, structural repair</p></div>
-      <div class="service"><h3>Framing & drywall</h3><p>Layout changes, insulation, finishing</p></div>
-      <div class="service"><h3>Concrete & foundation</h3><p>Driveways, footings, repair</p></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">How a project runs</div>
-    <div class="process">
-      <div class="process-step" data-n="1"><h3>Consultation</h3><p>We walk the site and scope the work together.</p></div>
-      <div class="process-step" data-n="2"><h3>Design & permits</h3><p>Drawings and paperwork handled before anyone breaks ground.</p></div>
-      <div class="process-step" data-n="3"><h3>Construction</h3><p>One crew, weekly updates, no disappearing subcontractors.</p></div>
-      <div class="process-step" data-n="4"><h3>Final walkthrough</h3><p>We sign off together — nothing's finished until you say so.</p></div>
-    </div>
-  </section>
-
-  <div class="area">
-    <h2>Service area</h2>
-    <div class="area-list">
-      <span>Brooklyn</span><span>Queens</span><span>Manhattan</span><span>Staten Island</span><span>Bronx</span>
+<section id="estimate-promo" class="reveal">
+  <div class="wrap">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Tell us what you need. We'll get back to you to discuss your project and estimate.</p>
+    <div class="btn-row">
+      <a class="btn-primary" href="#estimate">GET A FREE ESTIMATE</a>
+      <a class="btn-secondary" href="tel:+12014504617">CALL (201) 450-4617</a>
     </div>
   </div>
+</section>
 
-  <footer>
-    <h2>Start a project</h2>
-    <p>Tell us about the work — we'll follow up within one business day.</p>
-    <a class="cta btn-primary" href="https://wa.me/12014504617" style="display:inline-block;">Request a consultation</a>
-  </footer>
-</div>
-
-<!-- ===================== CONCEPT C ===================== -->
-<div class="concept concept-c" id="concept-c">
-  <header>
-    <div class="logo">Silikyan Build</div>
-    <a class="cta btn-amber" href="#get-estimate" style="display:inline-block;">Free estimate</a>
-  </header>
-
-  <div class="hero-photo-wrap"><img class="hero-photo" data-photo="heroPortrait" alt="Khoren Silikyan on site"></div>
-  <div class="hero">
-    <h1>Your renovation, without the disappearing act.</h1>
-    <p class="pain"><strong>Deposit paid, contractor gone. A quote that quietly doubles. A job that drags for months, half-finished.</strong> Home improvement work is the single most-complained-about service in New York City — it doesn't have to be your story.</p>
-    <p class="pitch">Silikyan Construction gives you one licensed, insured crew, a written estimate that doesn't move once work starts, and weekly updates until the last coat of paint dries.</p>
-    <button class="cta btn-cta">Get your written estimate</button>
-    <div class="btn-note">No obligation. Response within 24 hours.</div>
-  </div>
-
-  <div class="trust-row">
-    <div><span>Licensed</span> home improvement contractor, verified with NYC DCA</div>
-    <div><span>Written contract</span> before any work starts — it's the law, and we follow it</div>
-    <div><span>One crew</span>, start to finish — no rotating subcontractors</div>
-  </div>
-
-  <section>
-    <div class="section-title">How it works</div>
-    <div class="steps">
-      <div class="step"><div class="step-n">1</div><div><h3>Tell us about your space</h3><p>Send photos or book a walkthrough — takes two minutes.</p></div></div>
-      <div class="step"><div class="step-n">2</div><div><h3>Get it in writing</h3><p>A real number and a payment schedule, not a verbal ballpark.</p></div></div>
-      <div class="step"><div class="step-n">3</div><div><h3>We handle the paperwork</h3><p>Permits, and board approval documents if you're in a co-op or condo.</p></div></div>
-      <div class="step"><div class="step-n">4</div><div><h3>We build it</h3><p>The same crew every day, weekly check-ins so nothing goes quiet.</p></div></div>
-      <div class="step"><div class="step-n">5</div><div><h3>Walk through together</h3><p>You sign off before we call it done.</p></div></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">Before & after</div>
-    <div class="ba-slider">
-      <img class="ba-img" data-photo="before1" alt="Before renovation">
-      <div class="ba-after-wrap"><img class="ba-img" data-photo="after1" alt="After renovation"></div>
-      <div class="ba-handle"></div>
-      <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">Recent projects</div>
-    <div class="gallery">
-      <img data-photo="gallery1" alt="Project photo 1">
-      <img data-photo="gallery2" alt="Project photo 2">
-      <img data-photo="gallery3" alt="Project photo 3">
-      <img data-photo="gallery4" alt="Project photo 4">
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">What clients say</div>
-    <div class="reviews">
-      <div class="review"><p>"The estimate matched the final bill. That alone put them ahead of the last two contractors I called."</p><span>— Bensonhurst homeowner</span></div>
-      <div class="review"><p>"Khoren answered his phone the whole way through. That's rarer than it should be."</p><span>— Sunset Park renovation client</span></div>
-      <div class="review"><p>"No disappearing act — the same two guys showed up every single day until it was done."</p><span>— Crown Heights homeowner</span></div>
-    </div>
-  </section>
-
-  <div class="final" id="get-estimate">
-    <h2>Ready to get it in writing?</h2>
-    <p style="font-size:14px;color:#5c6a5e;margin-bottom:18px;">Tell us a bit about the project — we'll follow up within 24 hours.</p>
-    <form class="contact-form" id="estimate-form">
-      <input type="text" placeholder="Name">
-      <input type="tel" placeholder="Phone number">
-      <select>
-        <option value="">Type of project</option>
-        <option>Kitchen renovation</option>
-        <option>Bathroom renovation</option>
-        <option>Full home renovation</option>
-        <option>Exterior / facade</option>
+<section id="estimate" class="reveal">
+  <div class="wrap">
+    <h2>Request Your Free Estimate</h2>
+    <div class="sub">No backend on this static page yet — submitting sends your details straight to WhatsApp instead.</div>
+    <form id="estimateForm">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="email" name="email" placeholder="Email">
+      <select name="type">
+        <option value="">Project Type</option>
+        <option>Home Remodeling</option>
+        <option>Kitchen</option>
+        <option>Bathroom</option>
+        <option>Painting</option>
+        <option>Drywall</option>
+        <option>Flooring / Tile</option>
+        <option>Repairs</option>
         <option>Other</option>
       </select>
-      <textarea placeholder="Anything else we should know?" rows="3"></textarea>
-      <button type="submit" class="cta btn-cta">Get your written estimate</button>
+      <textarea name="message" rows="4" placeholder="Tell us about your project"></textarea>
+      <button type="submit" class="btn-primary">REQUEST FREE ESTIMATE</button>
     </form>
+    <div class="form-note">Prefer to talk directly? <a href="tel:+12014504617" style="text-decoration:underline;">Call</a> or <a href="https://wa.me/12014504617" target="_blank" rel="noopener" style="text-decoration:underline;">WhatsApp Us</a>.</div>
   </div>
+</section>
 
-  <div class="sticky-cta">
-    <span>Written estimate, no obligation</span>
-    <div style="display:flex;gap:8px;">
-      <a class="cta btn-amber" href="https://wa.me/12014504617" style="display:inline-block;">WhatsApp</a>
-      <a class="cta btn-amber" href="tel:+12014504617" style="display:inline-block;">Call</a>
-    </div>
+<footer>
+  <div class="logo">SILIKYAN CONSTRUCTION</div>
+  <p>Brooklyn, NY</p>
+  <p><a href="tel:+12014504617" style="color:#fff;">(201) 450-4617</a></p>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#estimate">Contact</a>
   </div>
+  <a class="btn-primary" style="max-width:240px; margin:0 auto 10px;" href="#estimate">Get a Free Estimate</a>
+  <div><a href="https://wa.me/12014504617" target="_blank" rel="noopener" style="color:#C9CCD1; text-decoration:underline;">WhatsApp Us</a></div>
+  <div class="copyright">© 2026 Silikyan Construction. All Rights Reserved.</div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="call" href="tel:+12014504617">CALL</a>
+  <a class="est" href="#estimate">GET FREE ESTIMATE</a>
 </div>
 
 <script>
-  // ====== PHOTO LIBRARY — to update a photo, replace its URL below. Nothing else needs to change. ======
-  const PHOTOS = {
-    meetPortrait: "meetPortrait.jpeg",
-    heroPortrait: "heroPortrait.jpeg",
-    before1: "before1.jpeg",
-    after1: "after1.jpeg",
-    gallery1: "gallery1.jpeg",
-    gallery2: "gallery2.jpeg",
-    gallery3: "gallery3.jpeg",
-    gallery4: "gallery4.jpeg"
-  };
-  document.querySelectorAll('[data-photo]').forEach(img => {
-    if (PHOTOS[img.dataset.photo]) img.src = PHOTOS[img.dataset.photo];
-  });
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  burgerBtn.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
 
-  // before/after sliders (handles multiple sliders independently)
   document.querySelectorAll('.ba-slider').forEach(slider => {
     const range = slider.querySelector('.ba-range');
     const afterWrap = slider.querySelector('.ba-after-wrap');
     const handle = slider.querySelector('.ba-handle');
-    if (range) {
-      range.addEventListener('input', () => {
-        const v = range.value;
-        afterWrap.style.clipPath = `inset(0 ${100 - v}% 0 0)`;
-        handle.style.left = v + '%';
-      });
-    }
-  });
-
-  document.querySelectorAll('.picker button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.picker button').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.concept').forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.target).classList.add('active');
-      window.scrollTo({top: 0});
+    range.addEventListener('input', () => {
+      const v = range.value;
+      afterWrap.style.clipPath = `inset(0 ${100 - v}% 0 0)`;
+      handle.style.left = v + '%';
     });
   });
+
+  function openLightbox(src) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.getElementById('estimateForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const lines = [
+      "Hi, I'd like a free estimate.",
+      `Name: ${f.name.value}`,
+      `Phone: ${f.phone.value}`,
+      f.email.value ? `Email: ${f.email.value}` : null,
+      f.type.value ? `Project: ${f.type.value}` : null,
+      f.message.value ? `Details: ${f.message.value}` : null
+    ].filter(Boolean);
+    window.open(`https://wa.me/12014504617?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>
